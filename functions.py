@@ -45,3 +45,13 @@ def rand_2or4(mat):
 	# add a 2 or 4 to the 
 	# selected random empty cell
 	mat[r][c] = random.choice(l)
+
+	
+#function to get transpose of the matrix
+def transpose(mat):
+	new_mat = []
+	for i in range(4):
+		new_mat.append([])
+		for j in range(4):
+			new_mat[i].append(mat[j][i])
+	return new_mat
