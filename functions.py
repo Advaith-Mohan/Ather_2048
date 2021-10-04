@@ -46,7 +46,7 @@ def rand_2or4(mat):
 	# selected random empty cell
 	mat[r][c] = random.choice(l)
 
-	
+
 #function to get transpose of the matrix
 def transpose(mat):
 	new_mat = []
@@ -55,3 +55,4 @@ def transpose(mat):
 		for j in range(4):
 			new_mat[i].append(mat[j][i])
 	return new_mat
+
