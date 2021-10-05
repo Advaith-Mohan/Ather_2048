@@ -23,7 +23,7 @@ while(True):
 
 
 	# we have to move up
-	if(x == 3):
+	if(x == '3'):
 
 		# call the move_up function
 		mat = moveup.up(mat)
@@ -46,7 +46,7 @@ while(True):
 	# below
 
 	# to move down
-	elif(x == 4):
+	elif(x == '4'):
 		mat = movedown.down(mat)
 		status = functions.get_current_state(mat)
 		print(status)
@@ -56,9 +56,10 @@ while(True):
 			break
 
 	# to move left
-	elif(x == 1):
+	elif(x == '1'):
 		mat = functions.transpose(mat)
 		mat = moveup.up(mat)
+		mat = functions.transpose(mat)
 		status = functions.get_current_state(mat)
 		print(status)
 		if(status == 'GAME NOT OVER'):
@@ -67,9 +68,10 @@ while(True):
 			break
 
 	# to move right
-	elif(x == 2):
+	elif(x == '2'):
 		mat = functions.transpose(mat)
 		mat = movedown.down(mat)
+		mat = functions.transpose(mat)
 		status = functions.get_current_state(mat)
 		print(status)
 		if(status == 'GAME NOT OVER'):
