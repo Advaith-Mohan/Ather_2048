@@ -44,7 +44,7 @@ def rand_2or4(mat):
 		c = random.randint(0, 3)
 		count += 1
 		if count > 16:
-			print ("Invalid move.. Try different move..")
+			print ("Invalid move.. Try different move....")
 			return
 
 	
