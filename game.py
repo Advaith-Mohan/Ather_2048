@@ -1,4 +1,4 @@
-# 2048.py
+# main program
 
 # importing the functions.py,
 # moveup.py and movedown.py files
@@ -17,6 +17,7 @@ while(True):
 
 	for i in range (4):
 		print(mat[i])
+
 	# taking the user input
 	# for next step
 	x = input("Press the command : ")
@@ -25,15 +26,15 @@ while(True):
 	# we have to move up
 	if(x == '3'):
 
-		# call the move_up function
+		# call the up function from moveup
 		mat = moveup.up(mat)
 
 		# get the current state and print it
 		status = functions.get_current_state(mat)
 		print(status)
 
-		# if game not ove then continue
-		# and add a new two
+		# if game not over then continue
+		# and add a new random 2 or 4
 		if(status == 'GAME NOT OVER'):
 			functions.rand_2or4(mat)
 
@@ -41,9 +42,7 @@ while(True):
 		else:
 			break
 
-	# the above process will be followed
-	# in case of each type of move
-	# below
+	# same for remaining moves
 
 	# to move down
 	elif(x == '4'):
