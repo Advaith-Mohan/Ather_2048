@@ -30,5 +30,4 @@ def up(mat):
 				mat[pos][j] = newmat[i][j]
 				pos += 1
 
-	for i in range (4):
-		print (mat[i])
+	return mat
