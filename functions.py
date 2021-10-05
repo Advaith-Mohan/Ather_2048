@@ -35,11 +35,18 @@ def rand_2or4(mat):
 	r = random.randint(0, 3)
 	c = random.randint(0, 3)
 
+	count = 0
+
 	# check if the cell is empty (0)
 	# else select new random cell
 	while(mat[r][c] != 0):
 		r = random.randint(0, 3)
 		c = random.randint(0, 3)
+		count += 1
+		if count > 16:
+			print ("Invalid move.. Try different move..")
+			return
+
 	
 	l = [2,4]
 	# add a 2 or 4 to the 
